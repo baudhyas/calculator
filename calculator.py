@@ -94,6 +94,13 @@ class Calculator(Frame):
 
     def equal(self):
         data = self.entry.get()
+
+        while len(data) != 0:
+            if data[0] == '0':
+                data = data[1:]
+            else:
+                break
+
         if len(data) != 0:
             try:
                 ans = eval(data)
